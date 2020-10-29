@@ -1,11 +1,11 @@
 const { notEmpty } = require('../utils.js')
 
 module.exports = {
-  description: 'generate a view',
+  description: 'generate vue list page',
   prompts: [{
     type: 'input',
     name: 'name',
-    message: 'view name please',
+    message: 'page name please',
     validate: notEmpty('name')
   },
   {
@@ -37,11 +37,11 @@ module.exports = {
   }
   ],
   actions: data => {
-    const name = '{{name}}'
+    const name = '{{properCase name}}'
     const actions = [{
       type: 'add',
       path: `src/views/${name}/index.vue`,
-      templateFile: 'plop-templates/view/index.hbs',
+      templateFile: 'plop-templates/list/index.hbs',
       data: {
         name: name,
         template: data.blocks.includes('template'),
