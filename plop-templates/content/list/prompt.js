@@ -1,4 +1,4 @@
-const { notEmpty } = require('../utils.js')
+const { notEmpty } = require('../../utils.js')
 
 module.exports = {
   description: 'generate vue list page',
@@ -41,7 +41,7 @@ module.exports = {
     const actions = [{
       type: 'add',
       path: `src/views/${name}/index.vue`,
-      templateFile: 'plop-templates/list/index.hbs',
+      templateFile: 'plop-templates/content/list/index.hbs',
       data: {
         name: name,
         template: data.blocks.includes('template'),

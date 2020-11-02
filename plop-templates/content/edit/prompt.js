@@ -1,7 +1,7 @@
-const { notEmpty } = require('../utils.js')
+const { notEmpty } = require('../../utils.js')
 
 module.exports = {
-  description: 'generate vue new(create form) page',
+  description: 'generate vue edit page',
   prompts: [{
     type: 'input',
     name: 'name',
@@ -41,7 +41,7 @@ module.exports = {
     const actions = [{
       type: 'add',
       path: `src/views/${name}/index.vue`,
-      templateFile: 'plop-templates/new/index.hbs',
+      templateFile: 'plop-templates/content/edit/index.hbs',
       data: {
         name: name,
         template: data.blocks.includes('template'),
