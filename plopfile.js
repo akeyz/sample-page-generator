@@ -3,9 +3,13 @@ const contentDetailGenerator = require('./plop-templates/content/detail/prompt')
 const contentNewGenerator = require('./plop-templates/content/new/prompt')
 const contentEditGenerator = require('./plop-templates/content/edit/prompt')
 
+const chartsLayoutGenerator = require('./plop-templates/charts/layout/prompt')
+
 module.exports = function (plop) {
   plop.setGenerator('content-list', contentListGenerator)
   plop.setGenerator('content-detail', contentDetailGenerator)
   plop.setGenerator('content-new', contentNewGenerator)
   plop.setGenerator('content-edit', contentEditGenerator)
+  
+  plop.setGenerator('charts-layout', chartsLayoutGenerator)
 }
