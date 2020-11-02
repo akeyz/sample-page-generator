@@ -20,6 +20,11 @@ export default new Vuex.Store({
         name: '新建',
         path: '/new',
         component: 'New'
+      },
+      {
+        name: '编辑',
+        path: '/edit',
+        component: 'Edit'
       }
     ]
   },

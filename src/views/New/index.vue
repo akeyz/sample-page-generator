@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h2>详情</h2>
+        <h2>新建</h2>
         <template v-if="form">
             <el-form ref="form" :model="form" label-width="80px">
                 <el-form-item label="活动名称">

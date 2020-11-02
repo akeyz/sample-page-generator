@@ -1,7 +1,6 @@
-{{#if template}}
 <template>
     <div>
-        <h2>新建</h2>
+        <h2>编辑</h2>
         <template v-if="form">
             <el-form ref="form" :model="form" label-width="80px">
                 <el-form-item label="活动名称">
@@ -46,47 +45,44 @@
                     <el-input type="textarea" v-model="form.desc" :rows="16"></el-input>
                 </el-form-item>
                 <el-form-item>
-                    <el-button type="primary" @click="onSubmit">立即创建</el-button>
+                    <el-button type="primary" @click="onSubmit">保存</el-button>
                     <el-button>取消</el-button>
                 </el-form-item>
             </el-form>
         </template>
     </div>
 </template>
-{{/if}}
 
-{{#if script}}
 <script>
     export default {
-        name: '{{ properCase name }}',
+        name: 'Edit',
         props: {},
         data() {
             return {
-                form: {
-                    name: '',
-                    region: '',
-                    date1: '',
-                    date2: '',
-                    delivery: false,
-                    type: [],
-                    resource: '',
-                    desc: ''
-                }
+                form: null,
             };
         },
-        created() { },
+        created() {
+            this.fetchDetailData();
+        },
         mounted() { },
         methods: {
             onSubmit() {
                 console.log(this.form);
-            }
+            },
+            fetchDetailData() {
+                fetch("./data/detail.json")
+                    .then((r) => {
+                        return r.json();
+                    })
+                    .then((r) => {
+                        this.form = r;
+                    });
+            },
         },
     };
 </script>
-{{/if}}
 
-{{#if style}}
 <style lang="less" scoped>
 
 </style>
-{{/if}}
