@@ -9,32 +9,42 @@ export default new Vuex.Store({
       {
         name: '首页',
         path: '/',
-        component: 'Home'
+        component: 'home'
       },
       {
         name: '内容相关',
         path: '/content',
-        component: 'Homw',
         children: [
           {
             name: '列表',
             path: 'list',
-            component: 'List'
+            component: 'content/list'
           },
           {
             name: '详情',
             path: 'detail',
-            component: 'Detail'
+            component: 'content/detail'
           },
           {
             name: '新建',
             path: 'new',
-            component: 'New'
+            component: 'content/new'
           },
           {
             name: '编辑',
             path: 'edit',
-            component: 'Edit'
+            component: 'content/edit'
+          }
+        ]
+      },
+      {
+        name: '图表相关',
+        path: '/charts',
+        children: [
+          {
+            name: '可配置图表',
+            path: 'config',
+            component: 'charts/config'
           }
         ]
       }

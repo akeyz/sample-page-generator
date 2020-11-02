@@ -23,7 +23,7 @@
 
 <script>
     export default {
-        name: 'List',
+        name: 'ContentList',
         props: {},
         data() {
             return {
