@@ -34,6 +34,11 @@ export default new Vuex.Store({
             name: '编辑',
             path: 'edit',
             component: 'content/edit'
+          },
+          {
+            name: '查询',
+            path: 'query',
+            component: 'content/query'
           }
         ]
       },

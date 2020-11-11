@@ -1,56 +1,60 @@
 <template>
-    <div>
-        <h2>列表</h2>
-        <el-table :data="tableData" border style="width: 100%">
-            <el-table-column prop="date" label="日期"> </el-table-column>
-            <el-table-column prop="name" label="姓名" width="100"> </el-table-column>
-            <el-table-column prop="province" label="省份" width="100">
-            </el-table-column>
-            <el-table-column prop="city" label="市区" width="100"> </el-table-column>
-            <el-table-column prop="address" label="地址"> </el-table-column>
-            <el-table-column label="操作" width="200">
-                <template slot-scope="scope">
-                    <el-button @click="handleClick(scope.row)" type="primary" size="small">查看</el-button>
-                    <el-button type="primary" plain size="small">编辑</el-button>
-                </template>
-            </el-table-column>
-        </el-table>
+  <div>
+    <h2>列表</h2>
+    <el-table :data="tableData" border style="width: 100%">
+      <el-table-column prop="date" label="日期" width="180"> </el-table-column>
+      <el-table-column prop="name" label="姓名"> </el-table-column>
+      <el-table-column prop="province" label="省份" width="250">
+      </el-table-column>
+      <el-table-column prop="city" label="市区" width="200"> </el-table-column>
+      <el-table-column prop="address" label="地址"> </el-table-column>
+      <el-table-column label="操作" width="200">
+        <template slot-scope="scope">
+          <el-button @click="handleClick(scope.row)" type="primary" size="small"
+            >查看</el-button
+          >
+          <el-button type="primary" plain size="small">编辑</el-button>
+        </template>
+      </el-table-column>
+    </el-table>
 
-        <el-pagination background layout="prev, pager, next" :total="1000" @current-change="fetchTableData">
-        </el-pagination>
-    </div>
+    <el-pagination
+      background
+      layout="prev, pager, next"
+      :total="1000"
+      @current-change="fetchTableData"
+    >
+    </el-pagination>
+  </div>
 </template>
 
 <script>
-    export default {
-        name: 'ContentList',
-        props: {},
-        data() {
-            return {
-                tableData: [],
-            };
-        },
-        created() {
-            this.fetchTableData();
-        },
-        mounted() { },
-        methods: {
-            handleClick(row) {
-                console.log(row);
-            },
-            fetchTableData() {
-                fetch("./data/list.json")
-                    .then((r) => {
-                        return r.json();
-                    })
-                    .then((r) => {
-                        this.tableData = r;
-                    });
-            },
-        },
+export default {
+  name: "ContentList",
+  props: {},
+  data() {
+    return {
+      tableData: [],
     };
+  },
+  created() {
+    this.fetchTableData().then((r) => {
+      this.tableData = r;
+    });
+  },
+  mounted() {},
+  methods: {
+    handleClick(row) {
+      console.log(row);
+    },
+    fetchTableData() {
+      return fetch("./data/list.json").then((r) => {
+        return r.json();
+      });
+    },
+  },
+};
 </script>
 
 <style lang="less" scoped>
-
 </style>

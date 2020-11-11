@@ -3,11 +3,11 @@
     <div>
         <h2>列表</h2>
         <el-table :data="tableData" border style="width: 100%">
-            <el-table-column prop="date" label="日期"> </el-table-column>
-            <el-table-column prop="name" label="姓名" width="100"> </el-table-column>
-            <el-table-column prop="province" label="省份" width="100">
+            <el-table-column prop="date" label="日期" width="180"> </el-table-column>
+            <el-table-column prop="name" label="姓名"> </el-table-column>
+            <el-table-column prop="province" label="省份" width="250">
             </el-table-column>
-            <el-table-column prop="city" label="市区" width="100"> </el-table-column>
+            <el-table-column prop="city" label="市区" width="200"> </el-table-column>
             <el-table-column prop="address" label="地址"> </el-table-column>
             <el-table-column label="操作" width="200">
                 <template slot-scope="scope">
@@ -34,7 +34,9 @@
             };
         },
         created() {
-            this.fetchTableData();
+            this.fetchTableData().then((r) => {
+                this.tableData = r;
+            });
         },
         mounted() { },
         methods: {
@@ -42,13 +44,9 @@
                 console.log(row);
             },
             fetchTableData() {
-                fetch("./data/list.json")
-                    .then((r) => {
-                        return r.json();
-                    })
-                    .then((r) => {
-                        this.tableData = r;
-                    });
+                return fetch("./data/list.json").then((r) => {
+                    return r.json();
+                });
             },
         },
     };
