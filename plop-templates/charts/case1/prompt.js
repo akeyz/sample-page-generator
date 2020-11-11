@@ -1,7 +1,7 @@
 const { notEmpty } = require('../../utils.js')
 
 module.exports = {
-  description: 'generate A big screen page via json configuration',
+  description: 'generate big screen case 1 demo',
   prompts: [{
     type: 'input',
     name: 'name',
@@ -41,7 +41,7 @@ module.exports = {
     const actions = [{
       type: 'add',
       path: `src/views/${name}/index.vue`,
-      templateFile: 'plop-templates/chart/layout/index.hbs',
+      templateFile: 'plop-templates/charts/case1/index.hbs',
       data: {
         name: name,
         template: data.blocks.includes('template'),

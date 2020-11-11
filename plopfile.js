@@ -5,6 +5,7 @@ const contentEditGenerator = require('./plop-templates/content/edit/prompt')
 const contentQueryGenerator = require('./plop-templates/content/query/prompt')
 
 const chartsLayoutGenerator = require('./plop-templates/charts/layout/prompt')
+const chartsCase1Generator = require('./plop-templates/charts/case1/prompt')
 
 module.exports = function (plop) {
   plop.setGenerator('content-list', contentListGenerator)
@@ -14,4 +15,5 @@ module.exports = function (plop) {
   plop.setGenerator('content-query', contentQueryGenerator)
 
   plop.setGenerator('charts-layout', chartsLayoutGenerator)
+  plop.setGenerator('charts-case-1', chartsCase1Generator)
 }

@@ -50,6 +50,11 @@ export default new Vuex.Store({
             name: '可配置图表',
             path: 'config',
             component: 'charts/layout'
+          },
+          {
+            name: '示例一',
+            path: 'case1',
+            component: 'charts/case1'
           }
         ]
       }
