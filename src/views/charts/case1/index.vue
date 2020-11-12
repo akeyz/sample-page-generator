@@ -1198,6 +1198,7 @@ header {
     color: #fff;
     text-align: center;
     line-height: 1rem;
+    margin: 0;
   }
 
   .showTime {
