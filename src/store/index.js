@@ -55,6 +55,11 @@ export default new Vuex.Store({
             name: '示例一',
             path: 'case1',
             component: 'charts/case1'
+          },
+          {
+            name: '示例二',
+            path: 'case2',
+            component: 'charts/case2'
           }
         ]
       }
