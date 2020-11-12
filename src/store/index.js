@@ -60,6 +60,26 @@ export default new Vuex.Store({
             name: '示例二',
             path: 'case2',
             component: 'charts/case2'
+          },
+          {
+            name: '布局一',
+            path: 'tpl1',
+            component: 'charts/tpl1'
+          },
+          {
+            name: '布局二',
+            path: 'tpl2',
+            component: 'charts/tpl2'
+          },
+          {
+            name: '布局三',
+            path: 'tpl3',
+            component: 'charts/tpl3'
+          },
+          {
+            name: '布局四',
+            path: 'tpl4',
+            component: 'charts/tpl4'
           }
         ]
       }

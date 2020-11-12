@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="full">
         <router-view />
     </div>
 </template>
@@ -9,3 +9,9 @@ export default {
   name: 'Layout'
 }
 </script>
+
+<style lang="less" scoped>
+.full {
+  height: 100%;
+}
+</style>
