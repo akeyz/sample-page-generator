@@ -1173,6 +1173,7 @@ export default {
   border-bottom-left-radius: 6px;
   position: absolute;
   left: 5%;
+  margin: 0;
 }
 .tile-size-color {
   font-size: 12px;
