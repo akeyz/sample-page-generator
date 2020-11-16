@@ -1343,7 +1343,6 @@ export default {
   margin-right: 10px;
 }
 .data_content {
-  /*overflow-x: hidden;*/
   min-width: 1366px;
   background-color: #081832;
   padding-top: 20px;
@@ -1461,13 +1460,6 @@ export default {
   box-shadow: 0px 0 55px rgba(255, 255, 255, 0.1) inset;
   position: relative;
 }
-.data_content .data_main .main_left div.left_1 {
-  /*background: url("..//images/case3/chart_1.png") no-repeat center;*/
-}
-
-.data_content .data_main .main_left div.left_2 {
-  /*background: url("..//images/case3/chart_2.png") no-repeat center;*/
-}
 .data_content .data_main .main_left div:nth-child(1) {
   margin-bottom: 50px;
 }
@@ -1552,10 +1544,6 @@ export default {
 .data_content .data_main .main_right div.right_1 .choice label {
   color: #fff;
 }
-
-.data_content .data_main .main_right div.right_2 {
-  /*background: url("..//images/case3/chart_4.png") no-repeat center;*/
-}
 .data_content .data_main .main_right div.right_2 .chart_text {
   width: 18%;
   color: #fff;
@@ -1612,8 +1600,6 @@ export default {
   height: 280px;
   margin-left: 20px;
 }
-.data_content .data_bottom div {
-}
 .data_content .data_bottom .bottom_1 {
   width: 24%;
   height: 280px;
@@ -1621,7 +1607,6 @@ export default {
   position: relative;
   box-sizing: border-box;
   border: 1px solid #034c6a;
-  /*background: url("..//images/case3/chart_5.png") no-repeat;*/
 }
 .data_content .data_bottom .bottom_center {
   width: 52%;
@@ -1635,7 +1620,6 @@ export default {
   box-sizing: border-box;
   border: 1px solid #034c6a;
   margin-left: 25px;
-  /*background: url("..//images/case3/chart_6.png") no-repeat;*/
 }
 .data_content .data_bottom .bottom_3 {
   width: calc(50% - 40px);
@@ -1644,7 +1628,6 @@ export default {
   position: relative;
   box-sizing: border-box;
   border: 1px solid #034c6a;
-  /*background: url("..//images/case3/chart_7.png") no-repeat;*/
   margin-left: 25px;
 }
 .data_content .data_bottom .bottom_4 {
@@ -1654,7 +1637,6 @@ export default {
   position: relative;
   box-sizing: border-box;
   border: 1px solid #034c6a;
-  /*background: url("..//images/case3/chart_8.png") no-repeat;*/
 }
 .data_content .data_bottom div .main_title {
   width: 220px;
