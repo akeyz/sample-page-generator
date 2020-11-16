@@ -47,7 +47,7 @@ export default new Vuex.Store({
         path: '/charts',
         children: [
           {
-            name: '可配置图表',
+            name: '可配置图表(思路)',
             path: 'config',
             component: 'charts/layout'
           },
