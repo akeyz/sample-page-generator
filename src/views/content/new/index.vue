@@ -42,7 +42,7 @@
                     </el-radio-group>
                 </el-form-item>
                 <el-form-item label="活动形式">
-                    <el-input type="textarea" v-model="form.desc" :rows="16"></el-input>
+                    <el-input type="textarea" v-model="form.desc" :rows="6"></el-input>
                 </el-form-item>
                 <el-form-item>
                     <el-button type="primary" @click="onSubmit">立即创建</el-button>
